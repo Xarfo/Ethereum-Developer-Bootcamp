@@ -52,7 +52,7 @@ contract MintableToken is ERC20, Ownable {
         // Emit the Mint event with appropriate input parameters.    
         emit Mint (_to, _amount);
         // Indicate that the operation was successful. 
-        ;
+        return true;
     }
 
     // Create function to stop minting new tokens. Modifiers modifiers modifiers.
