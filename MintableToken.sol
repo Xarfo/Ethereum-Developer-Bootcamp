@@ -27,7 +27,7 @@ contract MintableToken is ERC20, Ownable {
     // Create modifier that enforces the condition for minting to be available only if minting is not finished.
     modifier onlyBeforeMintingFinished() {
         // Require statements are used to check for conditions and throw an exception if the condition isn't met.
-        ;
+        require(mintingFinished_ == false);
         // _; is used to return the flow of execution to the original function.
         _;
     }
@@ -48,9 +48,9 @@ contract MintableToken is ERC20, Ownable {
     // Make sure to include the appropriate modifers.
     function mint(address _to, uint256 _amount) public onlyMinter onlyBeforeMintingFinished returns (bool) {
         // Call mint function inherited from ERC20 contract which mints inputted amount and assigns it to an account.
-        ;
+        _mint(_to, _amount);
         // Emit the Mint event with appropriate input parameters.    
-        ;
+        emit Mint (_to, _amount);
         // Indicate that the operation was successful. 
         ;
     }
