@@ -35,7 +35,7 @@ contract MintedCrowdSale {
     * 3) Number of weis paid for purchase
     * 4) Amount of tokens purchased
     */
-    event TokenPurchase(address indexed sender, address indexed beneficiary, uint256 numWeisPaid, uint256 tokens);
+    event TokenPurchase(address indexed sender, address indexed beneficiary, uint256 value, uint256 amount);
 
     /** Create publicly accessible constructor function with 3 parameters:
     * 1) Rate of how many token units a buyer gets per wei
