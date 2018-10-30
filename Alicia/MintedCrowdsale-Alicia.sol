@@ -46,7 +46,7 @@ contract MintedCrowdsale is YourToken{  //always inherit import contract
     constructor(uint256 _rate, address _wallet, YourToken _token) public {
         // Set conditions with require statements to make sure the rate is a positive number and the addresses are non-zero.
         require(_rate > 0, "Rate has to be greater than zero");
-        require(_wallet != address(0), "Check your address" );
+        require(_wallet != address(0), "Check your address");
         require(_token != address(0), "Check your address");
 
         // Set inputs as defined state variables

@@ -27,7 +27,7 @@ contract MintableToken is ERC20, Ownable {
     // Create modifier that enforces the condition for minting to be available only if minting is not finished.
     modifier onlyBeforeMintingFinished() {
         // Require statements are used to check for conditions and throw an exception if the condition isn't met.
-        require(mintingFinished_ == false);
+        require(!mintingFinished_, "Minting is not finished!");
         // _; is used to return the flow of execution to the original function.
         _;
     }
